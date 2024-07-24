@@ -1,0 +1,42 @@
+{
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg",
+		"resource_type": "azurerm_resource_group",
+		"resource_name": "kt-cn-edu-rg"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/routeTables/VNet1-route-table": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/routeTables/VNet1-route-table",
+		"resource_type": "azurerm_route_table",
+		"resource_name": "VNet1-route-table"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1",
+		"resource_type": "azurerm_virtual_network",
+		"resource_name": "VNet1"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/AzureBastionSubnet": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/AzureBastionSubnet",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "AzureBastionSubnet"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/DBSubnet": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/DBSubnet",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "DBSubnet"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/DBSubnet/routeTables/L3N1YnNjcmlwdGlvbnMvMGMzY2Y1ODAtNzNkMi00YjQyLTlkYjgtYzM1MTdlMTk4YWZjL3Jlc291cmNlR3JvdXBzL2t0LWNuLWVkdS1yZy9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvcm91dGVUYWJsZXMvVk5ldDEtcm91dGUtdGFibGU=": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/DBSubnet",
+		"resource_type": "azurerm_subnet_route_table_association",
+		"resource_name": "DBSubnetAssoc"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/WasSubnetName": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/WasSubnetName",
+		"resource_type": "azurerm_subnet",
+		"resource_name": "WasSubnetName"
+	},
+	"/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/WasSubnetName/routeTables/L3N1YnNjcmlwdGlvbnMvMGMzY2Y1ODAtNzNkMi00YjQyLTlkYjgtYzM1MTdlMTk4YWZjL3Jlc291cmNlR3JvdXBzL2t0LWNuLWVkdS1yZy9wcm92aWRlcnMvTWljcm9zb2Z0Lk5ldHdvcmsvcm91dGVUYWJsZXMvVk5ldDEtcm91dGUtdGFibGU=": {
+		"resource_id": "/subscriptions/0c3cf580-73d2-4b42-9db8-c3517e198afc/resourceGroups/kt-cn-edu-rg/providers/Microsoft.Network/virtualNetworks/VNet1/subnets/WasSubnetName",
+		"resource_type": "azurerm_subnet_route_table_association",
+		"resource_name": "WasSubnetAssoc"
+	}
+}
