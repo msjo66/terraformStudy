@@ -1,5 +1,9 @@
 # terraform plan -var-file=setup.tfvars 와 같이 사용할 때 var-file 샘플 파일
+
+# resource를 만들 기본 region/location을 선택하기 위한 지역 변수.
 geography="Korea"
+
+# terraform state를 저장하기 위한 storage account/container를 위한 정보
 tf-state-info = {
   rg-name = "rg-terraform-state"
   account-name = "ktittechdxstate01" #이름이 이상한데, storage account의 특징이다. global unique, - 못씀 등등..kt it기술dx state sequence
@@ -7,3 +11,18 @@ tf-state-info = {
   account-tier = "Standard"
   account-replication-type = "LRS"
 }
+
+# 만들고자 하는 resource group
+target_resource_group_name = "rg-az01-msjo66-tf"
+
+# 만들고자 하는 vnet및 subnet 정보
+vnet_name = "tf-test-vnet"
+address_space = ["10.0.0.0/16"]
+subnets = [{
+    address_prefixes = [ "10.0.0.0/24" ]
+    subnet_name = "subnet1"
+  },
+  {
+    address_prefixes = [ "10.0.1.0/24" ]
+    subnet_name = "subnet2"
+}]

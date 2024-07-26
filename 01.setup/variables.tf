@@ -14,3 +14,22 @@ variable "tf-state-info" {
         account-replication-type="LRS"
     }
 }
+
+# 만들고자 하는 resource group
+variable "target_resource_group_name" {
+    type = string
+}
+
+# 만들고자 하는 vnet및 subnet 정보
+variable "vnet_name" {
+    type = string
+}
+variable "address_space" {
+    type = list(string)
+}
+variable "subnets" {
+    type = list(object({
+      address_prefixes = list(string)
+      subnet_name = string
+    }))
+}

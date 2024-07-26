@@ -7,12 +7,14 @@ locals {
   location = module.ktRegionSelector.two_regions_with_zones[0].name
 }
 
+# 이 resource는 terraform state를 위한 storage account이다. 그 이외 용도로 사용하지 말 것
 resource "azurerm_resource_group" "rg-terraform" {
   location = local.location
   name     = var.tf-state-info["rg-name"]
 }
 
-#terraform status 를 저장할 storage account및 blob container
+#terraform status 를 저장할 storage account및 blob container.
+# TODO : 이 storage account와 container도 AVM module이 있으면 그걸로 바꿔야 함
 resource "azurerm_storage_account" "st-terraform" {
     account_replication_type = var.tf-state-info["account-replication-type"]
     account_tier = var.tf-state-info["account-tier"]
@@ -23,9 +25,27 @@ resource "azurerm_storage_account" "st-terraform" {
 resource "azurerm_storage_container" "tfstate" {
     name = var.tf-state-info["container-name"]
     storage_account_name = azurerm_storage_account.st-terraform.name
-    
 }
 
+#실제로 setup을 시작할 resource group
+resource "azurerm_resource_group" "rg-targetGroup" {
+  location = local.location
+  name = var.target_resource_group_name
+  
+}
+
+# TODO : 가장 기본적인 샘플. 모니터링, 보안, DNS, roleAssign 등을 위해서는 
+# https://registry.terraform.io/modules/Azure/avm-res-network-virtualnetwork/azurerm/latest/examples/complete
+# 참조하여 재작성 해야함
+module "ktVnet" {
+  source = "../modules/kt-vnet"
+  
+  resource_group_name = azurerm_resource_group.rg-targetGroup.name
+  location = local.location
+  vnet_name = var.vnet_name
+  address_space = var.address_space
+  subnets = var.subnets
+}
 # resource "azurerm_virtual_network" "vnet-az01-msjo66-tf" {
 #   address_space       = ["10.0.0.0/16"]
 #   location            = azurerm_resource_group.targetRG.location
