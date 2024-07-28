@@ -46,7 +46,7 @@ module "ktVnet" {
   address_space = var.address_space
   subnets = var.subnets
 }
-# resource "azurerm_virtual_network" "vnet-az01-msjo66-tf" {
+# resource "azurerm_virtual_netwohttps://registry.terraform.io/modules/Azure/avm-res-network-virtualnetwork/azurerm/latest/examples/completerk" "vnet-az01-msjo66-tf" {
 #   address_space       = ["10.0.0.0/16"]
 #   location            = azurerm_resource_group.targetRG.location
 #   name                = "vnet-az01-msjo66-tf"
