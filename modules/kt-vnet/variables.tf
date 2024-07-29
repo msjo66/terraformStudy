@@ -9,8 +9,8 @@ variable "address_space" {
     type = list(string)
 }
 variable "subnets" {
-    type = list(object({
-      subnet_name = string
+    type = map(object({
+      name = string
       address_prefixes = list(string)
     }))
 }

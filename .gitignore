@@ -40,3 +40,4 @@ terraform.rc
 abc.txt
 def.txt
 digraph.g
+**/modules_playground/*
