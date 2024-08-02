@@ -41,3 +41,6 @@ abc.txt
 def.txt
 digraph.g
 **/modules_playground/*
+
+### 환경변수는 저장하지 않는다.
+**/*.env
